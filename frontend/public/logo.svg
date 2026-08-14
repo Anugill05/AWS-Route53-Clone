@@ -1,0 +1,17 @@
+<svg width="98" height="28" viewBox="0 0 98 28" xmlns="http://www.w3.org/2000/svg">
+  <text x="0" y="16" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="16" fill="#FFFFFF" letter-spacing="0.3">aws</text>
+  <path d="M1 20 Q 15 26.5, 30 20" stroke="#FF9900" stroke-width="2" fill="none" stroke-linecap="round" />
+  <path d="M26.5 19 L31 20.3 L28 24.5" fill="#FF9900" />
+
+  <g fill="#FFFFFF">
+    <circle cx="56" cy="6" r="2" />
+    <circle cx="64" cy="6" r="2" />
+    <circle cx="72" cy="6" r="2" />
+    <circle cx="56" cy="14" r="2" />
+    <circle cx="64" cy="14" r="2" />
+    <circle cx="72" cy="14" r="2" />
+    <circle cx="56" cy="22" r="2" />
+    <circle cx="64" cy="22" r="2" />
+    <circle cx="72" cy="22" r="2" />
+  </g>
+</svg>
