@@ -25,13 +25,13 @@ def login(payload: LoginRequest, response: Response, db: Session = Depends(get_d
 
     token = create_access_token(user.id)
     response.set_cookie(
-    key=SESSION_COOKIE_NAME,
-    value=token,
-    httponly=True,
-    secure=True,
-    samesite="none",
-    max_age=ACCESS_TOKEN_EXPIRE_HOURS * 3600,
-    path="/",
+        key=SESSION_COOKIE_NAME,
+        value=token,
+        httponly=True,
+        secure=COOKIE_SECURE,
+        samesite=COOKIE_SAMESITE,
+        max_age=ACCESS_TOKEN_EXPIRE_HOURS * 3600,
+        path="/",
 )
     return user
 
