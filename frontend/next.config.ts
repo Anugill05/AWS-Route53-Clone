@@ -1,17 +1,23 @@
-import type {NextConfig} from "next"; 
+// import type {NextConfig} from "next"; 
 
-const BACKEND_ORIGIN = process.env.BACKEND_ORIGIN; 
+// const BACKEND_ORIGIN = process.env.BACKEND_ORIGIN; 
 
-const nextConfig: NextConfig = {
-  async rewrites() {
-       if(!BACKEND_ORIGIN) return []; 
-return [
-{
-source: "/api/:path*", 
-destination: `${BACKEND_ORIGIN}/api/:path`, 
-}, 
-]; 
-}, 
-}; 
+// const nextConfig: NextConfig = {
+//   async rewrites() {
+//        if(!BACKEND_ORIGIN) return []; 
+// return [
+// {
+// source: "/api/:path*", 
+// destination: `${BACKEND_ORIGIN}/api/:path`, 
+// }, 
+// ]; 
+// }, 
+// }; 
+
+// export default nextConfig;
+
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {};
 
 export default nextConfig;
