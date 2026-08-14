@@ -27,12 +27,15 @@ async function proxy(request: NextRequest, path: string[]): Promise<NextResponse
     redirect: "follow",
   });
 
+  const bodyBuffer=await backendResponse.arrayBuffer();
+
   const responseHeaders = new Headers(backendResponse.headers);
   responseHeaders.delete("content-encoding");
   responseHeaders.delete("transfer-encoding");
+  responseHeaders.delete("content-length");
   responseHeaders.delete("set-cookie");
 
-  const response = new NextResponse(backendResponse.body, {
+  const response = new NextResponse(bodyBuffer, {
     status: backendResponse.status,
     headers: responseHeaders,
   });
